@@ -1,0 +1,6 @@
+framework module Pods_WordGuessingGame {
+  umbrella header "Pods-WordGuessingGame-umbrella.h"
+
+  export *
+  module * { export * }
+}
