@@ -35,6 +35,16 @@ The application will be a game to guess a word and the app will function as foll
  - App has 5 table views and 9 VC
  - Auto layout
 
+# Build Requirements:
+
+Xcode
+
+# Build Instructions:
+
+ - Download the project from https://github.com/sahanadarsh/Word-Guessing-Game-iOS-App
+ - Open the xcworkspace file in Xcode
+ - Run the project in simulator or your iPhone and enjoy the game
+
 # Levels specification:
 
 # 1st level
