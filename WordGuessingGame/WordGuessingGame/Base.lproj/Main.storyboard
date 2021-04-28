@@ -406,7 +406,7 @@ Level 5:
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTG-Bp-yjB">
-                                <rect key="frame" x="20" y="123.5" width="335" height="0.0"/>
+                                <rect key="frame" x="20" y="143.5" width="335" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -417,7 +417,7 @@ Level 5:
                         <constraints>
                             <constraint firstItem="qmQ-27-m0d" firstAttribute="centerY" secondItem="lIY-Ki-Ju2" secondAttribute="centerY" constant="30" id="EsF-Is-e6D"/>
                             <constraint firstItem="qmQ-27-m0d" firstAttribute="centerX" secondItem="lIY-Ki-Ju2" secondAttribute="centerX" id="G6j-Db-Pwm"/>
-                            <constraint firstItem="qmQ-27-m0d" firstAttribute="top" secondItem="DTG-Bp-yjB" secondAttribute="bottom" constant="50" id="Hpy-MO-yFl"/>
+                            <constraint firstItem="qmQ-27-m0d" firstAttribute="top" secondItem="DTG-Bp-yjB" secondAttribute="bottom" constant="30" id="Hpy-MO-yFl"/>
                             <constraint firstItem="Wg5-80-ad5" firstAttribute="trailing" secondItem="DTG-Bp-yjB" secondAttribute="trailing" constant="20" id="IQb-Ra-s4b"/>
                             <constraint firstItem="qmQ-27-m0d" firstAttribute="leading" secondItem="Wg5-80-ad5" secondAttribute="leading" id="bRh-P5-yKg"/>
                             <constraint firstItem="DTG-Bp-yjB" firstAttribute="leading" secondItem="Wg5-80-ad5" secondAttribute="leading" constant="20" id="dAw-Yf-vxG"/>

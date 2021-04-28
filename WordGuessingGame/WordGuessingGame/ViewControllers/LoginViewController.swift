@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
                     print("Document does not exist")
                 }
             }
-            performSegue(withIdentifier: "IntsructionsSegue", sender: self)
+            performSegue(withIdentifier: "informationSegue", sender: self)
         }
         
         txtPassword.text = ""
