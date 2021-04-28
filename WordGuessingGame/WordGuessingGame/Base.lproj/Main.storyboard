@@ -101,7 +101,7 @@
                         <outlet property="lblStatus" destination="VtS-S3-Isr" id="vez-8E-qG4"/>
                         <outlet property="txtEmail" destination="Q1P-1r-22A" id="dZC-gy-Xoa"/>
                         <outlet property="txtPassword" destination="Rxg-LC-i64" id="fmU-Ae-ZVU"/>
-                        <segue destination="BGp-Jl-sgt" kind="show" identifier="IntsructionsSegue" id="mNy-ux-Bq9"/>
+                        <segue destination="BGp-Jl-sgt" kind="show" identifier="informationSegue" id="mNy-ux-Bq9"/>
                         <segue destination="ncN-xJ-Jty" kind="show" identifier="registerSegue" id="TTt-jO-5zR"/>
                     </connections>
                 </viewController>
@@ -118,7 +118,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njH-Aw-cd1">
-                                <rect key="frame" x="112.5" y="538" width="150" height="40"/>
+                                <rect key="frame" x="112.5" y="587" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.09369204193353653" green="0.54361766576766968" blue="0.5845068097114563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Nv8-AZ-Qof"/>
@@ -133,9 +133,9 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eh-Ls-1n6">
-                                <rect key="frame" x="20" y="20" width="335" height="498"/>
+                                <rect key="frame" x="20" y="20" width="335" height="547"/>
                                 <color key="backgroundColor" red="0.086470611393451691" green="0.53673535585403442" blue="0.72107714414596558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <mutableString key="text">App which picks one secret word from the displayed words list and user has to guess that secret word from the displayed words list using app provided hint. There are 5 levels and with each level difficulty increases. 
+                                <string key="text">App which picks one secret word from the displayed words list and user has to guess that secret word from the displayed words list using app provided hint. There are 5 levels and with each level difficulty increases. 
 
 When the user starts to guess the secret word from the displayed words list, app displays how many letters the word has in common with the secret word they are trying to guess, without regard to position or case-sensitivity (See "Examples" below)
       
@@ -164,7 +164,7 @@ Level 4:
   5 attempts
 Level 5:
   15 words each of length 7
-  4 attempts</mutableString>
+  4 attempts</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -724,6 +724,7 @@ Level 5:
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="mNy-ux-Bq9"/>
         <segue reference="jk2-ak-uNs"/>
         <segue reference="i4Q-76-Hzo"/>
         <segue reference="60e-6Z-qor"/>

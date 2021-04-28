@@ -30,7 +30,7 @@ class Level2TableViewCell: UITableViewCell {
         self.button2.addTarget(self, action: #selector(button2Action(_:)), for: .touchUpInside)
         self.button3.addTarget(self, action: #selector(button3Action(_:)), for: .touchUpInside)
     }
-        
+    
     @IBAction func button1Action(_ sender: UIButton) {
         btn1Action?()
     }

@@ -14,11 +14,11 @@ class Level3TableViewCell: UITableViewCell {
     var btn2Action : (() -> ())?
     
     var btn3Action : (() -> ())?
-
+    
     @IBOutlet var button1: UIButton!
     
     @IBOutlet var button2: UIButton!
-
+    
     @IBOutlet var button3: UIButton!
     
     override func awakeFromNib() {
@@ -34,11 +34,11 @@ class Level3TableViewCell: UITableViewCell {
     @IBAction func button1Action(_ sender: UIButton) {
         btn1Action?()
     }
-        
+    
     @IBAction func button2Action(_ sender: UIButton) {
         btn2Action?()
     }
-        
+    
     @IBAction func button3Action(_ sender: UIButton) {
         btn3Action?()
     }

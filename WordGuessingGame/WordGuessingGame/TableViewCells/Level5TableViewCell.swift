@@ -34,7 +34,7 @@ class Level5TableViewCell: UITableViewCell {
     @IBAction func button1Action(_ sender: UIButton) {
         btn1Action?()
     }
-        
+    
     @IBAction func button2Action(_ sender: UIButton) {
         btn2Action?()
     }

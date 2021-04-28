@@ -23,7 +23,7 @@ class Level4ViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var limitCount = 5
     
     var db: Firestore!
-
+    
     @IBOutlet var level4TblView: UITableView!
     
     @IBOutlet var lblLimit: UILabel!
@@ -42,7 +42,7 @@ class Level4ViewController: UIViewController, UITableViewDelegate, UITableViewDa
         level4TblView.dataSource = self
         getWords()
     }
-        
+    
     @IBAction func logoutAction(_ sender: Any) {
         do {
             try Auth.auth().signOut()
@@ -56,7 +56,7 @@ class Level4ViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func initializeText(){
         lblLimit.text = "You have \(limitCount) Limits to guess"
     }
-
+    
     func getWords(){
         let url = getLevel4URL()
         getLevel4Words(url)
@@ -76,7 +76,7 @@ class Level4ViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 print("Error in getting all the words \(error)")
             }
     }
-
+    
     func commonCharacterCount(s1: String, s2: String) -> Int
     {
         let s1 = s1.lowercased()
@@ -152,7 +152,7 @@ class Level4ViewController: UIViewController, UITableViewDelegate, UITableViewDa
         url.append(apiKey)
         return url
     }
-
+    
     func getLevel4Words(_ url : String) -> Promise<[String]>{
         return Promise<[String]> { seal -> Void in
             AF.request(url).responseJSON { response in
@@ -200,5 +200,5 @@ class Level4ViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.present(alert, animated: true, completion: nil)
         }
     }
-
+    
 }

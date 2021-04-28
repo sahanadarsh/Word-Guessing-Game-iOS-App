@@ -15,11 +15,11 @@ class LevelsViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     
     @IBOutlet var button3: UIButton!
-        
+    
     @IBOutlet var button4: UIButton!
-        
+    
     @IBOutlet var button5: UIButton!
-        
+    
     @IBOutlet var lblRounds: UILabel!
     
     override func viewDidLoad() {
@@ -60,7 +60,7 @@ class LevelsViewController: UIViewController {
             lblRounds.text = "Completed All 5 rounds \(String(timesAllLevelsCompleted)) times"
         }
     }
-        
+    
     @IBAction func level1Action(_ sender: Any) {
         self.performSegue(withIdentifier: "Level1Segue", sender: self)
     }
@@ -72,7 +72,7 @@ class LevelsViewController: UIViewController {
     @IBAction func level3Action(_ sender: Any) {
         self.performSegue(withIdentifier: "Level3Segue", sender: self)
     }
-        
+    
     @IBAction func level4Action(_ sender: Any) {
         self.performSegue(withIdentifier: "Level4Segue", sender: self)
     }

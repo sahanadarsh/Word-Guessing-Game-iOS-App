@@ -11,7 +11,7 @@ import Firebase
 class RegisterViewController: UIViewController {
     
     @IBOutlet var txtEmail: UITextField!
-        
+    
     @IBOutlet var txtPassword: UITextField!
     
     @IBOutlet var lblStatus: UILabel!
@@ -43,7 +43,7 @@ class RegisterViewController: UIViewController {
         }
         
         if password.count < 6 {
-            lblStatus.text = "Password should contains atleast 6 characters"
+            lblStatus.text = "Password should contain atleast 6 characters"
             return
         }
         
@@ -53,7 +53,7 @@ class RegisterViewController: UIViewController {
         }
         
         Auth.auth().createUser(withEmail: email, password: password, completion: { (res, error) in
-
+            
             if error != nil {
                 self.lblStatus.text = error?.localizedDescription
                 return
@@ -62,12 +62,12 @@ class RegisterViewController: UIViewController {
             guard let uid = res?.user.uid else {
                 return
             }
-
+            
             let ref = Database.database().reference()
             let usersReference = ref.child("users").child(uid)
             let values = ["email": email]
             usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
-
+                
                 if error != nil {
                     self.lblStatus.text = error?.localizedDescription
                     return

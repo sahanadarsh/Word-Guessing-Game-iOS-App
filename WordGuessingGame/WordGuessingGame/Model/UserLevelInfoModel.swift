@@ -8,7 +8,7 @@
 import Foundation
 
 class UserLevelInfoModel{
-
+    
     var level: String = ""
     var round: Int = 0
     

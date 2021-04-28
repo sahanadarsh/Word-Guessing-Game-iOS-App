@@ -15,7 +15,7 @@ import PromiseKit
 import Firebase
 
 class Level1ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     var wordsArr: [String] = [String]()
     
     var secretWord = ""
@@ -37,7 +37,7 @@ class Level1ViewController: UIViewController, UITableViewDelegate, UITableViewDa
         level1TblView.dataSource = self
         getWords()
     }
-
+    
     @IBAction func logoutAction(_ sender: Any) {
         do {
             try Auth.auth().signOut()
@@ -67,7 +67,7 @@ class Level1ViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 print("Error in getting all the words \(error)")
             }
     }
-
+    
     func commonCharacterCount(s1: String, s2: String) -> Int
     {
         let s1 = s1.lowercased()
@@ -137,7 +137,7 @@ class Level1ViewController: UIViewController, UITableViewDelegate, UITableViewDa
         url.append(apiKey)
         return url
     }
-
+    
     func getLevel1Words(_ url : String) -> Promise<[String]>{
         return Promise<[String]> { seal -> Void in
             AF.request(url).responseJSON { response in

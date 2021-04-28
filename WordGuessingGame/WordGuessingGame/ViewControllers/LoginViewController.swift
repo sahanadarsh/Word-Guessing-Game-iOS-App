@@ -12,7 +12,7 @@ import SwiftSpinner
 class LoginViewController: UIViewController {
     
     @IBOutlet var txtEmail: UITextField!
-        
+    
     @IBOutlet var txtPassword: UITextField!
     
     @IBOutlet var lblStatus: UILabel!
@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         Firestore.firestore().settings = settings
         db = Firestore.firestore()
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         let keyChain = KeychainService().keyChain
         
@@ -35,8 +35,8 @@ class LoginViewController: UIViewController {
             let userID = Auth.auth().currentUser!.uid
             
             let docRef = self.db.collection("UserLevelInfo").document(userID)
-
-
+            
+            
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
                     let level = document.get("level")
@@ -61,14 +61,14 @@ class LoginViewController: UIViewController {
         let keyChain = KeychainService().keyChain
         keyChain.set(uid, forKey: "uid")
     }
-
+    
     @IBAction func loginAction(_ sender: Any) {
         lblStatus.text = ""
         let email = txtEmail.text!
         let password = txtPassword.text!
         
-        if email == "" || password == "" || password.count < 6 {
-            lblStatus.text = "Please enter valid Email/Password"
+        if email == ""  {
+            lblStatus.text = "Please enter Email"
             return
         }
         
@@ -77,6 +77,15 @@ class LoginViewController: UIViewController {
             return
         }
         
+        if password == "" {
+            lblStatus.text = "Please enter Password"
+            return
+        }
+        
+        if password.count < 6 {
+            lblStatus.text = "Password should contain atleast 6 characters"
+            return
+        }
         
         SwiftSpinner.show("Logging in...")
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
@@ -88,17 +97,15 @@ class LoginViewController: UIViewController {
                 return
             }
             
-            // We are logged in at this point
-            
             let uid = Auth.auth().currentUser?.uid
             
             self.addKeychainAfterLogin(uid!)
- 
+            
             let userID = Auth.auth().currentUser!.uid
             
             let docRef = self.db.collection("UserLevelInfo").document(userID)
-
-
+            
+            
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
                     let level = document.get("level")
@@ -113,10 +120,10 @@ class LoginViewController: UIViewController {
                     print("Document does not exist")
                 }
             }
-            self.performSegue(withIdentifier: "IntsructionsSegue", sender: self)
+            self.performSegue(withIdentifier: "informationSegue", sender: self)
             
         }
-            
+        
         
     }
     
@@ -124,7 +131,7 @@ class LoginViewController: UIViewController {
         self.performSegue(withIdentifier: "registerSegue", sender: self)
     }
     
-   
+    
 }
 
 
