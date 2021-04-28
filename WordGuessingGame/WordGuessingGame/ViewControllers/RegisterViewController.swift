@@ -37,6 +37,11 @@ class RegisterViewController: UIViewController {
             return
         }
         
+        if email.isEMail == false {
+            lblStatus.text = "Please enter valid Email"
+            return
+        }
+        
         if password == "" {
             lblStatus.text = "Please enter Password"
             return
