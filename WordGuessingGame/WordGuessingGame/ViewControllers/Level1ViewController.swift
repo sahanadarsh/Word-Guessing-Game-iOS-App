@@ -100,8 +100,8 @@ class Level1ViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = Bundle.main.loadNibNamed("Level1TableViewCell", owner: self, options: nil)?.first as! Level1TableViewCell
         if wordsArr.indices.contains(indexPath.row) {
             cell.button1.setTitle(wordsArr[indexPath.row], for: .normal)
-            cell.button2.setTitle(wordsArr[indexPath.row+5], for: .normal)
-            cell.button3.setTitle(wordsArr[indexPath.row+8], for: .normal)
+            cell.button2.setTitle(wordsArr[indexPath.row+3], for: .normal)
+            cell.button3.setTitle(wordsArr[indexPath.row+6], for: .normal)
         }
         
         cell.btn1Action = { [unowned self] in
