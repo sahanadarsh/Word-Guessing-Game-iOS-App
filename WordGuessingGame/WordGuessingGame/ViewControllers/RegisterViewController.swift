@@ -29,6 +29,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerAction(_ sender: Any) {
+        lblStatus.text = ""
         let email = txtEmail.text!
         let password = txtPassword.text!
         
