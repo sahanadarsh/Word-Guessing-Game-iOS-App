@@ -173,7 +173,7 @@ class Level4ViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func eachButtonAlert(word: String) -> (){
         if(isTwoWordsSame(s1: self.secretWord, s2: word) && self.limitCount > 0){
             lblLimit.text = ""
-            let alert = UIAlertController(title: "Congragulations!!!", message: "You won the 4th level", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Congratulations!!!", message: "You won the 4th level", preferredStyle: .alert)
             levelName = "level4"
             self.limitCount = 5
             let userID = Auth.auth().currentUser!.uid

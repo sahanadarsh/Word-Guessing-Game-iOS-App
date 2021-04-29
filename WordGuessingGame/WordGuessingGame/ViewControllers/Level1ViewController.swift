@@ -157,7 +157,7 @@ class Level1ViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func eachButtonAlert(word: String) -> (){
         if(isTwoWordsSame(s1: self.secretWord, s2: word)){
-            let alert = UIAlertController(title: "Congragulations!!!", message: "You won the 1st level", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Congratulations!!!", message: "You won the 1st level", preferredStyle: .alert)
             levelName = "level1"
             let userID = Auth.auth().currentUser!.uid
             self.db.collection("UserLevelInfo").document(userID).updateData(["level" : levelName])
